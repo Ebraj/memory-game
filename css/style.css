@@ -1,0 +1,144 @@
+@font-face {
+  font-family: River-Adventurer;
+  src: url("../fonts/river-adventurer.ttf");
+}
+
+body {
+  font-family: "River-Adventurer";
+}
+
+h1 {
+  text-align: center;
+  color: #9d9dff;
+  font-size: 5.5rem;
+}
+
+.game-starter, .victory-container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  cursor: pointer;
+  background-color: #000000d0;
+}
+
+.victory-container {
+  display: none;
+}
+
+.victory-container .victory-container-first {
+  cursor: default;
+}
+
+.victory-container .victory-container-play {
+  color: #c0c010;
+}
+
+.card-container {
+  -webkit-perspective: 900px;
+          perspective: 900px;
+  cursor: pointer;
+}
+
+.card-container.flip .card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card-container .card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card {
+  border-radius: 5px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 125px;
+  height: 125px;
+  position: relative;
+  -webkit-transition: all 0.65s ease;
+  transition: all 0.65s ease;
+}
+
+@media screen and (max-width: 475px) {
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.card-front, .card-back {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 475px) {
+  .card-front, .card-back {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.card-front {
+  background-color: #cb7cff;
+}
+
+.card-back {
+  background-color: #d8d8ff;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  grid-gap: 10px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #465dad;
+}
+
+.hide-class {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
